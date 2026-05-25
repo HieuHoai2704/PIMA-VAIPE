@@ -37,13 +37,13 @@ def inference(args):
         image_aggregation, sentences_projection, graph_extract = model(data)
         for image in image_aggregation:
             similarity = cos(image, sentences_projection)       
-            similarity = torch.where(similarity > 0.8, similarity, torch.zeros_like(similarity))
-                 
-            _, predicted = torch.max(similarity, 0)
-            if predicted.item() == 0:
-                print("Predicted: No match")
+            max_sim, predicted = torch.max(similarity, 0)
+            
+            # Ngưỡng similarity: nếu không có thuốc nào đạt > 0.5 thì là No match
+            if max_sim.item() < 0.5:
+                print("Predicted: No match (max similarity = {:.4f})".format(max_sim.item()))
             else:
-                print("Predicted: ", data.text[0][predicted.item()])
+                print("Predicted: ", data.text[0][predicted.item()], "(similarity = {:.4f})".format(max_sim.item()))
             
 if __name__ == '__main__':
     parse_args = option()
