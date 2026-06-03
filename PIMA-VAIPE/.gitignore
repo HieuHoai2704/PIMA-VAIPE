@@ -19,13 +19,11 @@ data/VAIPE-PP_03.zip
 data/VAIPE-PP_04.zip
 data/VAIPE-PP_05.zip
 data/VAIPE-PP_06.zip
-logs/
 vis/
 wandb/
 __pycache__/
 data/__pycache__/
 *.pyc
-*.pth
 *.rar
 *.zip
 .vscode-upload.json
