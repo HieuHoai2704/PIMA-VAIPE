@@ -16,7 +16,6 @@ Kết quả được trích xuất trực tiếp từ các file log sinh ra tron
 | **ocr_comparison** | OCR End-to-End (PaddleOCR) | 0.6480 | 50.95% | **44.31%** |
 | **ocr_comparison** | Không OCR (GT Text & BBox) | 0.2390 | 44.08% | **44.26%** |
 | **pima_ablation_study** | Mô hình cắt tỉa (Ablation) | 0.8620 | 50.52% | **26.23%** |
-| **ocr_comparison** | Kịch bản Ablation | 0.8160 | 43.73% | 0.00% |
 
 ---
 
