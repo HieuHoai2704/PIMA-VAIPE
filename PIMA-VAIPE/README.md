@@ -11,7 +11,7 @@ Kết quả được trích xuất trực tiếp từ các file log sinh ra tron
 | Phương Pháp / Thư Mục | Mô Hình / Kịch Bản | Train Loss | Val Accuracy | Khớp Chính Xác (Top-1 Matching) |
 | :--- | :--- | :---: | :---: | :---: |
 | **pima_ViT** (PIMA_NEW) | **ViT-B/16 (Cắt gọn)** | 0.2075 | - | **82.46%** |
-| **pima_Faster-R-CNN** | **Faster R-CNN (End-to-End)**| ~0.4871 | 80.02% | **83.47%** |
+| **pima_Faster-R-CNN** | **Faster R-CNN (End-to-End)**| ~0.4871 | 83.02% | **83.47%** |
 | **PIMA_Baseline** | Baseline Nguyên Bản | 0.5730 | 38.88% | **49.89%** |
 | **ocr_comparison** | OCR End-to-End (PaddleOCR) | 0.6480 | 50.95% | **44.31%** |
 | **ocr_comparison** | Không OCR (GT Text & BBox) | 0.2390 | 44.08% | **44.26%** |
