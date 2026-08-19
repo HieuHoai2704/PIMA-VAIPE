@@ -1,9 +1,23 @@
 # A Transformer-Based Multimodal Cross-Attention Framework with Relational Graph Attention for Pill–Prescription Matching
 
-[![Paper](https://img.shields.io/badge/Paper-PDF-red.svg)](./A Transformer-Based Multimodal Cross-Attention Framework with Relational Graph Attention for Pill–Prescription Matching.pdf)
-[![Dataset](https://img.shields.io/badge/Dataset-VAIPE-blue.svg)](https://www.kaggle.com/datasets/tommyngx/vaipepill2022)
+[![Paper PDF](https://img.shields.io/badge/Paper-PDF-red.svg)](./CMC-86877-Manuscript-Clean-128484-1.pdf)
+[![Acceptance Letter](https://img.shields.io/badge/Acceptance%20Letter-PDF-green.svg)](./CMC--ISSN_1546--2226_Acceptance_Letter_A%20Transformer--Based%20Multimodal%20Cross--Attention%20Framework%20wit.pdf)
+[![Journal](https://img.shields.io/badge/Journal-Computers%2C%20Materials%20%26%20Continua%20%28CMC%29-blue.svg)](https://www.techscience.com/journal/cmc)
+[![Dataset](https://img.shields.io/badge/Dataset-VAIPE-orange.svg)](https://www.kaggle.com/datasets/tommyngx/vaipepill2022)
 
-Official repository for the paper **"A Transformer-Based Multimodal Cross-Attention Framework with Relational Graph Attention for Pill–Prescription Matching"**. This repository contains the code for a fully multimodal framework designed to match physical pills from mobile photographs with corresponding drug names on medical prescriptions.
+Official repository for the paper **"A Transformer-Based Multimodal Cross-Attention Framework with Relational Graph Attention for Pill–Prescription Matching"**, published in **Computers, Materials & Continua (CMC)**.
+
+This repository contains the official implementation of our multimodal framework for matching physical pills from mobile photos with prescribed drug names on medical prescriptions.
+
+---
+
+## 🎉 News & Publication Status
+
+- **Status**: **Accepted & Published** in **Computers, Materials & Continua (CMC)** (ISSN: 1546-2226).
+- **Manuscript**: [CMC-86877-Manuscript-Clean-128484-1.pdf](./CMC-86877-Manuscript-Clean-128484-1.pdf)
+- **Acceptance Letter**: [CMC-ISSN_1546-2226_Acceptance_Letter.pdf](./CMC-ISSN_1546-2226_Acceptance_Letter_A%20Transformer-Based%20Multimodal%20Cross-Attention%20Framework%20wit.pdf)
+
+---
 
 ## 📝 Abstract
 
@@ -24,12 +38,13 @@ Experiments on the real-world **VAIPE dataset** show substantial improvements: t
 
 The codebase is organized into several directories corresponding to the different experimental setups and models discussed in the paper:
 
-- `pima_Faster-R-CNN/`: Contains the best-performing **End-to-End Faster R-CNN** variant (83.47% accuracy). Operates directly on raw prescription and pill images without requiring a separate background removal step.
-- `pima_ViT/`: Contains the **ViT-B/16** variant (82.46% accuracy). Utilizes clean-cropped pill images to extract highly detailed morphological features.
+- `pima_Faster-R-CNN/`: Contains the best-performing **End-to-End Faster R-CNN** variant (**83.47%** accuracy). Operates directly on raw prescription and pill images without requiring a separate background removal step.
+- `pima_ViT/`: Contains the **ViT-B/16** variant (**82.46%** accuracy). Utilizes clean-cropped pill images to extract highly detailed morphological features.
 - `ocr_comparison/`: Code for evaluating the impact of automatic text extraction (PP-OCRv3) versus ground-truth manual annotations.
 - `pima_ablation_study/`: Scripts for the ablation studies (removing R-GAT and InfoNCE loss) to validate the architectural contributions.
-- `PIMA_Baseline/`: The reproduced original PIMA baseline (ResNet50 + GraphSAGE) used for benchmarking.
-- `TSP_CMC_PIMA.pdf`: The official manuscript of the paper.
+- `pima_baseline/`: The reproduced original PIMA baseline (ResNet50 + GraphSAGE) used for benchmarking.
+- `CMC-86877-Manuscript-Clean-128484-1.pdf`: Official published manuscript.
+- `CMC-ISSN_1546-2226_Acceptance_Letter_A Transformer-Based Multimodal Cross-Attention Framework wit.pdf`: Official acceptance notification.
 
 ---
 
@@ -76,8 +91,6 @@ python train.py
 python eval.py
 ```
 
-Check the internal `README.md` inside each sub-directory for more detailed instructions specific to that architecture.
-
 ---
 
 ## ✒️ Citation
@@ -88,9 +101,13 @@ If you find this code or research helpful in your work, please cite our paper:
 @article{nguyen2026transformer,
   title={A Transformer-Based Multimodal Cross-Attention Framework with Relational Graph Attention for Pill–Prescription Matching},
   author={Linh Nguyen Thi My, Lap Thai Viet, Hoai Truong Hieu, Tham Vo and Vinh Truong Hoang},
-  journal={Computers, Materials & Continua},
+  journal={Computers, Materials \& Continua},
+  volume={--},
+  number={--},
+  pages={--},
   year={2026},
-  doi={10.32604/journal.202x.0xxxxx}
+  publisher={Tech Science Press},
+  doi={10.32604/cmc.2026.086877}
 }
 ```
 
